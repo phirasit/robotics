@@ -1,0 +1,2 @@
+stage_simulator
+-DCATKIN_DEVEL_PREFIX=/home/phirasit/work/robotics/ros/beginner_ws/devel -DCMAKE_INSTALL_PREFIX=/home/phirasit/work/robotics/ros/beginner_ws/install -G Unix Makefiles

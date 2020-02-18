@@ -1,0 +1,14 @@
+<launch>
+
+	<node pkg="create_node" type="turtlebot_node.py" name="turtlebot_node"  output="screen">
+		<param name="port" value="/dev/ttyUSB0"/>
+		<param name="robot_type" value="create"/>
+		<param name="has_gyro" value="False"/>
+		<param name="publish_tf" value="True"/>
+		<param name="min_abs_yaw_vel" value="0.85" type="double"/> <!--++++-->
+		<param name="max_abs_yaw_vel" value="1.5" type="double"/>
+		<param name="update_rate" value="40.0" type="double"/> <!--++++-->
+		<!--<param name="odom_angular_scale_correction" value="1.0" type="double"/>--> <!--++++-->
+	</node>
+
+</launch>

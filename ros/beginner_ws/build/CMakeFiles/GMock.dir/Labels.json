@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/phirasit/work/robotics/ros/beginner_ws/build/CMakeFiles/GMock"
+		},
+		{
+			"file" : "/home/phirasit/work/robotics/ros/beginner_ws/build/CMakeFiles/GMock.rule"
+		},
+		{
+			"file" : "/home/phirasit/work/robotics/ros/beginner_ws/build/CMakeFiles/GMock-complete.rule"
+		},
+		{
+			"file" : "/home/phirasit/work/robotics/ros/beginner_ws/build/GMock-prefix/src/GMock-stamp/GMock-install.rule"
+		},
+		{
+			"file" : "/home/phirasit/work/robotics/ros/beginner_ws/build/GMock-prefix/src/GMock-stamp/GMock-mkdir.rule"
+		},
+		{
+			"file" : "/home/phirasit/work/robotics/ros/beginner_ws/build/GMock-prefix/src/GMock-stamp/GMock-download.rule"
+		},
+		{
+			"file" : "/home/phirasit/work/robotics/ros/beginner_ws/build/GMock-prefix/src/GMock-stamp/GMock-update.rule"
+		},
+		{
+			"file" : "/home/phirasit/work/robotics/ros/beginner_ws/build/GMock-prefix/src/GMock-stamp/GMock-patch.rule"
+		},
+		{
+			"file" : "/home/phirasit/work/robotics/ros/beginner_ws/build/GMock-prefix/src/GMock-stamp/GMock-configure.rule"
+		},
+		{
+			"file" : "/home/phirasit/work/robotics/ros/beginner_ws/build/GMock-prefix/src/GMock-stamp/GMock-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"GMock"
+		],
+		"name" : "GMock"
+	}
+}

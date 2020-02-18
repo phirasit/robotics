@@ -1,0 +1,11 @@
+<launch>
+
+    <!--  ************** Stage Simulator ***************  -->
+    
+    <node pkg="stage_ros" type="stageros" name="stageros" args="$(find stage_simulator)/world/test-world.world" output="screen">
+	<remap from="/base_scan" to="/scan"/>
+	<param name="use_sim_time" value="false"/>
+    </node>
+
+    <include file="$(find stage_simulator)/launch/static_tf_publisher.launch" />
+</launch>

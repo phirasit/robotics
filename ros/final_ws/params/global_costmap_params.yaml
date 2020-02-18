@@ -1,0 +1,33 @@
+#Independent settings for the planner's costmap
+
+global_costmap:
+  #Set the global and robot frames for the costmap
+  global_frame: map
+  robot_base_frame: base_link
+
+  #We'll use a map served by the map_server to initialize this costmap
+  static_map: true #****
+  rolling_window: false
+
+  track_unknown_space: false
+
+  inflation_layer/inflation_radius: 0.50 #0.15
+  inflation_layer/cost_scaling_factor: 10.0 #2.5
+  
+  #******* MUST *******#
+  #******* this section is moved from costmap_common_params.yaml ****#
+  static_layer/map_topic: "/map"
+  static_layer/unknown_cost_value: -1
+  static_layer/lethal_cost_threshold: 100
+  static_layer/first_map_only: false #****
+  static_layer/subscribe_to_updates: true
+  static_layer/track_unknown_space: false
+  static_layer/use_maximum: true
+  static_layer/trinary_costmap: false 
+  #*******
+
+  plugins:
+   - {name: static_layer, type: "costmap_2d::StaticLayer"}
+   - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
+
+

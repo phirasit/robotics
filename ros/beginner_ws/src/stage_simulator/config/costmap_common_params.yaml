@@ -1,0 +1,31 @@
+transform_tolerance: 1.0
+#footprint: [[0.34863,0.270], [-0.26985, 0.270], [-0.26985, -0.29341], [0.34863, -0.29341]]
+footprint: [[0.36011,0.28115], [-0.2735, 0.28115], [-0.2735, -0.293375], [0.36011, -0.293375]]
+
+#robot_radius: 0.42
+#footprint_padding: 0.01
+# inflation_radius: 0.20
+
+update_frequency: 1.25
+publish_frequency: 2.0
+
+obstacle_layer/observation_sources: laser_scan
+obstacle_layer/laser_scan: {  topic: /scan,
+                              sensor_frame: base_laser_link,
+                              data_type: LaserScan,
+                              marking: true,
+                              clearing: true,
+                              obstacle_range: 4.5,
+                              raytrace_range: 5.0
+                           }
+obstacle_layer/track_unknown_space: true
+
+static_layer/map_topic: "/map"
+static_layer/unknown_cost_value: -1
+static_layer/lethal_cost_threshold: 100
+static_layer/first_map_only: true
+static_layer/subscribe_to_updates: true
+static_layer/track_unknown_space: true
+static_layer/use_maximum: true
+static_layer/trinary_costmap: true
+

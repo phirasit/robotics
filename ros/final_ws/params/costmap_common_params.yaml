@@ -1,0 +1,21 @@
+#footprint: [[0.34863,0.270], [-0.26985, 0.270], [-0.26985, -0.29341], [0.34863, -0.29341]]
+footprint: [[0.18,0.003], [-0.16, 0.003], [-0.13, -0.222], [0.16, -0.222]]
+
+transform_tolerance: 10.0 #****
+update_frequency: 3.0  #****
+publish_frequency: 2.0 #****
+always_send_full_costmap: true #****
+
+obstacle_layer/observation_sources: laser_scan
+obstacle_layer/laser_scan: {  topic: /scan, 
+                              sensor_frame: laser,
+                              data_type: LaserScan,
+                              marking: true,
+                              clearing: true,
+                              obstacle_range: 4.5,
+                              raytrace_range: 5.0
+                           }
+
+obstacle_layer/track_unknown_space: false
+
+#***** the static layer here must be gone (to global_costmap_params.yaml)

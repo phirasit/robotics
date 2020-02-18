@@ -1,0 +1,32 @@
+<launch>
+
+    <node pkg="move_base" type="move_base" respawn="true" name="move_base" output="screen">
+	<param name="controller_frequency" value="20.0" /> <!--*****-->
+	<param name="planner_patience" value="5.0" /> <!--*****-->
+ 	<param name="controller_patience" value="20.0" />
+	<param name="conservative_reset_dist" value="3.0" />
+	<param name="recovery_behavior_enabled" value="false" />
+	<param name="clearing_rotation_allowed" value="false" />
+	<param name="shutdown_costmaps" value="false" />
+	<param name="oscillation_timeout" value="30.0" />
+	<param name="oscillation_distance" value="0.8" />
+	<param name="planner_frequency" value="5.0" /> <!--*****-->
+	<param name="max_planning_retries" value="-1" />
+
+        <rosparam file="$(find create_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find create_navigation)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+
+        <rosparam file="$(find create_navigation)/config/global_costmap_params.yaml" command="load" />
+        <rosparam file="$(find create_navigation)/config/local_costmap_params.yaml" command="load" />
+
+	<!--<param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />-->
+	<!--<param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />-->
+	<param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS" />
+
+        <rosparam file="$(find create_navigation)/config/global_planner_params.yaml" command="load" />
+	<rosparam file="$(find create_navigation)/config/base_local_planner_params.yaml" command="load" />
+        <!--<rosparam file="$(find create_navigation)/config/dwa_local_planner_params.yaml" command="load"/>-->
+
+    </node>
+
+</launch>
